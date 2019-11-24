@@ -224,7 +224,7 @@ class App extends React.Component {
         :
         <Container className="App">
           <Stepper steps={ stepTitles } activeStep={this.state.step}/>
-            { (this.state.step <= 2) ? this.renderRadioBox(): null }
+            { (this.state.step < 2) ? this.renderRadioBox(): null }
             { (this.state.step === 0) ? this.renderMainForm() : null }
             { (this.state.step === 1) ? this.renderCoapplicantForm() : null }
             { (this.state.step === 2) ? <Step2 handleSteps={this.handleSteps}/> : null }
